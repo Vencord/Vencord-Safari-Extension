@@ -41,12 +41,14 @@ struct ContentView: View {
 		}
 	}
 	
+	#if os(macOS)
 	private func _openPreferences() {
 		Task {
 			await SafariConnector.openExtensionPrefs()
 			NSApplication.shared.terminate(nil)
 		}
 	}
+	#endif
 }
 
 // MARK: - Extension: View
