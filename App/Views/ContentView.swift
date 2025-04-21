@@ -9,11 +9,11 @@ import SwiftUI
 
 // MARK: - View
 struct ContentView: View {
-	@State private var enabled = false
+	@State private var _isExtensionEnabled = false
 	
 	#if os(macOS)
-	private var message: String {
-		enabled
+	private var _enabledMessage: String {
+		_isExtensionEnabled
 		? "Extension is enabled"
 		: "Extension is disabled. Enable it in Safari Preferences."
 	}
@@ -36,7 +36,7 @@ struct ContentView: View {
 		}
 		.onAppear {
 			Task {
-				self.enabled = await SafariConnector.extensionIsEnabled()
+				self._isExtensionEnabled = await SafariConnector.extensionIsEnabled()
 			}
 		}
 	}
@@ -61,7 +61,7 @@ extension ContentView {
 	#if os(macOS)
 	@ViewBuilder
 	private func _message() -> some View {
-		Text(message)
+		Text(_enabledMessage)
 	}
 	#endif
 }
