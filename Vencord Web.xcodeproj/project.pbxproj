@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		308C567C2A27BF1C005C001E /* Vencord Web Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 308C567B2A27BF1C005C001E /* Vencord Web Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		336D407D2DB6D79E00206400 /* modifyResponseHeaders.json in Resources */ = {isa = PBXBuildFile; fileRef = 336D405F2DB6D78B00206400 /* modifyResponseHeaders.json */; };
+		336D407E2DB6D7A000206400 /* content.js in Resources */ = {isa = PBXBuildFile; fileRef = 336D404F2DB6D78B00206400 /* content.js */; };
+		336D407F2DB6D7A400206400 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 336D405D2DB6D78B00206400 /* icon.png */; };
+		336D40802DB6D7AA00206400 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 336D405E2DB6D78B00206400 /* manifest.json */; };
+		336D40832DB6D84500206400 /* dist in Resources */ = {isa = PBXBuildFile; fileRef = 336D40812DB6D83B00206400 /* dist */; };
+		336D40842DB6D84800206400 /* vendor in Resources */ = {isa = PBXBuildFile; fileRef = 336D40822DB6D83E00206400 /* vendor */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +43,12 @@
 /* Begin PBXFileReference section */
 		308C56652A27BF1C005C001E /* Vencord Web.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vencord Web.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		308C567B2A27BF1C005C001E /* Vencord Web Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Vencord Web Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		336D404F2DB6D78B00206400 /* content.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = content.js; path = "../../dist/chromium-unpacked/content.js"; sourceTree = SOURCE_ROOT; };
+		336D405D2DB6D78B00206400 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = "../../dist/chromium-unpacked/icon.png"; sourceTree = SOURCE_ROOT; };
+		336D405E2DB6D78B00206400 /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = manifest.json; path = "../../dist/chromium-unpacked/manifest.json"; sourceTree = SOURCE_ROOT; };
+		336D405F2DB6D78B00206400 /* modifyResponseHeaders.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = modifyResponseHeaders.json; path = "../../dist/chromium-unpacked/modifyResponseHeaders.json"; sourceTree = SOURCE_ROOT; };
+		336D40812DB6D83B00206400 /* dist */ = {isa = PBXFileReference; lastKnownFileType = folder; name = dist; path = "../../dist/chromium-unpacked/dist"; sourceTree = SOURCE_ROOT; };
+		336D40822DB6D83E00206400 /* vendor */ = {isa = PBXFileReference; lastKnownFileType = folder; name = vendor; path = "../../dist/chromium-unpacked/vendor"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -83,6 +95,7 @@
 		308C56362A27BF1A005C001E = {
 			isa = PBXGroup;
 			children = (
+				336D3FC82DB6D66300206400 /* dist */,
 				33C2910E2DB6D25E00CB9764 /* Shared */,
 				337710DC2DB6C20800D0B4F2 /* App */,
 				337710BF2DB6C20800D0B4F2 /* Extension */,
@@ -97,6 +110,19 @@
 				308C567B2A27BF1C005C001E /* Vencord Web Extension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		336D3FC82DB6D66300206400 /* dist */ = {
+			isa = PBXGroup;
+			children = (
+				336D404F2DB6D78B00206400 /* content.js */,
+				336D40812DB6D83B00206400 /* dist */,
+				336D405D2DB6D78B00206400 /* icon.png */,
+				336D405E2DB6D78B00206400 /* manifest.json */,
+				336D405F2DB6D78B00206400 /* modifyResponseHeaders.json */,
+				336D40822DB6D83E00206400 /* vendor */,
+			);
+			path = dist;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,6 +217,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				336D40842DB6D84800206400 /* vendor in Resources */,
+				336D40832DB6D84500206400 /* dist in Resources */,
+				336D40802DB6D7AA00206400 /* manifest.json in Resources */,
+				336D407F2DB6D7A400206400 /* icon.png in Resources */,
+				336D407E2DB6D7A000206400 /* content.js in Resources */,
+				336D407D2DB6D79E00206400 /* modifyResponseHeaders.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
