@@ -47,7 +47,6 @@ struct ContentView: View {
 	private func _openPreferences() {
 		Task {
 			await SafariConnector.openExtensionPrefs()
-			NSApplication.shared.terminate(nil)
 		}
 	}
 	#endif
