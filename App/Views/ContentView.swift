@@ -34,11 +34,13 @@ struct ContentView: View {
 			Text("Welcome to Vencord!")
 			#endif
 		}
+        #if os(macOS)
 		.onAppear {
 			Task {
 				self._isExtensionEnabled = await SafariConnector.extensionIsEnabled()
 			}
 		}
+        #endif
 	}
 	
 	#if os(macOS)
